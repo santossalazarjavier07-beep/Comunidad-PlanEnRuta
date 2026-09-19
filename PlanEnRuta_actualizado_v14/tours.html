@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tours | PlanEnRuta</title>
+
+    <meta name="description"
+          content="Todos los tours de PlanEnRuta: Huancayo & Jauja, Huancaya & Vilca, Huaraz, Paracas + Ica y Vichaycocha. Reserva por WhatsApp al 923 118 811.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <a href="index.html" class="logo">Plan<strong>EnRuta</strong></a>
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a href="tours.html">Tours</a>
+            <a href="index.html#destinos">Galería</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="index.html#contacto">Contacto</a>
+            <a href="#" class="nav-terminos-link" data-terminos>Términos</a>
+        </nav>
+        <a href="https://wa.me/923118811" class="btn btn-small" target="_blank">Reservar</a>
+        <div class="nav-mobile-actions">
+<a class="header-whatsapp" href="https://wa.me/923118811?text=Hola%20PlanEnRuta%20%F0%9F%91%8B%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20tours." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg class="wa-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#25D366" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.737 5.58 2.137 8.01L0 32l8.19-2.113A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0Z"/><path fill="#FFF" d="M23.47 18.94c-.4-.2-2.35-1.16-2.71-1.29-.36-.13-.63-.2-.9.2-.27.4-1.03 1.29-1.26 1.56-.23.27-.46.3-.86.1-.4-.2-1.69-.62-3.22-1.99-1.19-1.06-1.99-2.37-2.22-2.77-.23-.4-.02-.62.18-.82.18-.18.4-.46.6-.7.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.9-2.17-1.24-2.97-.33-.79-.66-.68-.9-.7-.23-.02-.5-.02-.76-.02-.27 0-.7.1-1.06.5-.36.4-1.4 1.37-1.4 3.34 0 1.97 1.43 3.87 1.63 4.13.2.27 2.81 4.29 6.81 6.02.95.41 1.7.66 2.28.84.96.3 1.83.26 2.52.16.77-.12 2.35-.96 2.68-1.89.33-.93.33-1.72.23-1.89-.1-.16-.36-.26-.76-.46Z"/></svg></a>
+<button class="menu-mobile" id="menuMobile" aria-label="Abrir menú">☰</button>
+</div>
+    </div>
+</header>
+
+<div class="container breadcrumb">
+    <a href="index.html">Inicio</a> / Tours
+</div>
+
+<section class="section" style="padding-top:20px;">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">TODOS NUESTROS DESTINOS</span>
+            <h2>Nuestros tours</h2>
+            <p>
+                Cinco rutas pensadas para desconectarte de la ciudad: cultura
+                y aventura en el Valle del Mantaro, naturaleza en Vilca,
+                nevados y lagunas en Huaraz, desierto y mar en Ica, y aguas
+                termales en Vichaycocha.
+            </p>
+        </div>
+
+        <div class="tour-filter-bar">
+            <div class="tour-filter" role="tablist" aria-label="Filtrar tours por tipo de viaje">
+                <button type="button" class="tour-filter-btn active" data-filter="" role="tab" aria-selected="true">Todos</button>
+                <button type="button" class="tour-filter-btn" data-filter="full-day" role="tab" aria-selected="false">🌄 Full Day</button>
+                <button type="button" class="tour-filter-btn" data-filter="2d1n" role="tab" aria-selected="false">🌙 2 Días / 1 Noche</button>
+            </div>
+
+            <label class="tour-sort">
+                <span>Ordenar por</span>
+                <select id="tourSort" aria-label="Ordenar tours">
+                    <option value="">Recomendados</option>
+                    <option value="price-asc">Precio: menor a mayor</option>
+                    <option value="price-desc">Precio: mayor a menor</option>
+                    <option value="duration-asc">Duración: más corto primero</option>
+                    <option value="duration-desc">Duración: más largo primero</option>
+                </select>
+            </label>
+        </div>
+
+        <div id="tourListing">
+
+        <div class="tour-type-heading"><h3>🌄 Full Day</h3><span>Salida y regreso el mismo día</span></div>
+        <div class="tour-grid" id="tourGridFullDay">
+
+            <article class="tour-card" data-destination="paracas-ica" data-type="full-day" data-price="140" data-duration="1">
+                <div class="tour-image">
+                    <img src="img/tours/dunas-ica.jpg" alt="Oasis de Huacachina, Ica" loading="lazy">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-locate">📍 Bahía de Paracas &amp; desierto de Ica</span>
+                    <h3><a class="tour-card-link" href="tour-paracas-ica.html">Paracas + Ica</a></h3>
+                    <p>Un día lleno de naturaleza marina, paisajes desérticos y adrenalina.</p>
+                    <div class="tour-meta">
+                        <span>🗓️ Full Day</span>
+                        <span>🏖️ Sol · Mar · Desierto</span>
+                    </div>
+                    <div class="tour-ticket-divider"></div>
+                </div>
+                <div class="tour-footer">
+                    <div class="tour-price"><small>Desde</small><strong>S/ 140</strong><span class="tour-price-group">👥 Grupal (4+): S/ 130</span></div>
+                    <div class="tour-actions">
+                        <button class="btn btn-cotizar" data-cotizar="paracas-ica">Cotizar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" data-destination="vichaycocha" data-type="full-day" data-price="118" data-duration="1">
+                <div class="tour-image">
+                    <img src="img/tours/laguna-azulcocha.jpg" alt="Laguna Azulcocha, Vichaycocha" loading="lazy">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-locate">📍 Vichaycocha, Lima</span>
+                    <h3><a class="tour-card-link" href="tour-vichaycocha.html">Vichaycocha</a></h3>
+                    <p>Naturaleza, paisajes increíbles y aguas termales a pocas horas de Lima.</p>
+                    <div class="tour-meta">
+                        <span>🗓️ Full Day</span>
+                        <span>🌙 Salida noche anterior</span>
+                    </div>
+                    <div class="tour-ticket-divider"></div>
+                </div>
+                <div class="tour-footer">
+                    <div class="tour-price"><small>Desde</small><strong>S/ 118</strong><span class="tour-price-group">👥 Grupal (4+): S/ 115</span></div>
+                    <div class="tour-actions">
+                        <button class="btn btn-cotizar" data-cotizar="vichaycocha">Cotizar</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="tour-type-heading"><h3>🌙 2 Días / 1 Noche</h3><span>Salida viernes noche · Regreso domingo</span></div>
+        <div class="tour-grid" id="tourGrid2d1n">
+
+            <article class="tour-card" data-destination="huancayo-jauja" data-type="2d1n" data-price="180" data-duration="2">
+                <div class="tour-image">
+                    <img src="img/tours/mural-tunantada.jpg" alt="Mural de la Tunantada, Huancayo" loading="lazy">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-locate">📍 Valle del Mantaro</span>
+                    <h3><a class="tour-card-link" href="tour-huancayo-jauja.html">Huancayo &amp; Jauja</a></h3>
+                    <p>Desconéctate del trabajo y vive un fin de semana lleno de aventura, paisajes increíbles y cultura viva.</p>
+                    <div class="tour-meta">
+                        <span>🗓️ 2 días / 1 noche</span>
+                        <span>🌙 Salida nocturna</span>
+                    </div>
+                    <div class="tour-ticket-divider"></div>
+                </div>
+                <div class="tour-footer">
+                    <div class="tour-price"><small>Desde</small><strong>S/ 180</strong><span class="tour-price-group">👥 Grupal (4+): S/ 175</span><span class="tour-price-group">🛌 Con hospedaje: desde S/ 250</span></div>
+                    <div class="tour-actions">
+                        <button class="btn btn-cotizar" data-cotizar="huancayo-jauja">Cotizar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" data-destination="huancaya-vilca" data-type="2d1n" data-price="185" data-duration="2">
+                <div class="tour-image">
+                    <img src="img/tours/cascadas-del-eden.jpg" alt="Cascadas del Edén, Vilca" loading="lazy">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-locate">📍 Reserva Paisajística Nor Yauyos Cochas</span>
+                    <h3><a class="tour-card-link" href="tour-huancaya-vilca.html">Huancaya &amp; Vilca</a></h3>
+                    <p>Sumérgete en un paraíso de lagunas turquesas, cascadas cristalinas y bosques andinos.</p>
+                    <div class="tour-meta">
+                        <span>🗓️ 2 días / 1 noche</span>
+                        <span>🥾 Nivel fácil - moderado</span>
+                    </div>
+                    <div class="tour-ticket-divider"></div>
+                </div>
+                <div class="tour-footer">
+                    <div class="tour-price"><small>Desde</small><strong>S/ 185</strong><span class="tour-price-group">👥 Grupal (4+): S/ 175</span><span class="tour-price-group">🛌 Con hospedaje: S/ 275</span></div>
+                    <div class="tour-actions">
+                        <button class="btn btn-cotizar" data-cotizar="huancaya-vilca">Cotizar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="tour-card" data-destination="huaraz" data-type="2d1n" data-price="270" data-duration="2">
+                <div class="tour-image">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Laguna%2069%2C%20Huaraz%2C%20Peru.jpg" alt="Laguna 69, Huaraz" loading="lazy">
+                </div>
+                <div class="tour-content">
+                    <span class="tour-locate">📍 Cordillera Blanca, Áncash</span>
+                    <h3><a class="tour-card-link" href="tour-huaraz.html">Huaraz</a></h3>
+                    <p>Aventura, historia y naturaleza: Chavín de Huántar, Nevado Pastoruri, Laguna Llanganuco y la mítica Laguna 69.</p>
+                    <div class="tour-meta">
+                        <span>🗓️ 2 días / 1 noche</span>
+                        <span>🥾 Nivel moderado</span>
+                    </div>
+                    <div class="tour-ticket-divider"></div>
+                </div>
+                <div class="tour-footer">
+                    <div class="tour-price"><small>Desde</small><strong>S/ 270</strong><span class="tour-price-group">👥 Grupal (4+): S/ 260</span><span class="tour-price-group">🛌 Con hospedaje: S/ 330</span></div>
+                    <div class="tour-actions">
+                        <button class="btn btn-cotizar" data-cotizar="huaraz">Cotizar</button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+    <div class="container">
+        <div class="promo-inner" style="background:linear-gradient(110deg, var(--sun-dark), var(--sun)); text-align:left;">
+            <div>
+                <span class="eyebrow" style="color:var(--ink);">¿NO SABES QUÉ TOUR ELEGIR?</span>
+                <h2 style="color:var(--ink);">Escríbenos y te asesoramos</h2>
+                <p style="color:rgba(22,36,31,0.75);">Cuéntanos qué buscas y te recomendamos el tour ideal para ti.</p>
+            </div>
+            <a href="https://wa.me/923118811?text=Hola%20PlanEnRuta%2C%20no%20s%C3%A9%20qu%C3%A9%20tour%20elegir%2C%20%C2%BFme%20pueden%20asesorar%3F" class="btn btn-whatsapp" target="_blank"><svg class="wa-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#25D366" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.737 5.58 2.137 8.01L0 32l8.19-2.113A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0Z"/><path fill="#FFF" d="M23.47 18.94c-.4-.2-2.35-1.16-2.71-1.29-.36-.13-.63-.2-.9.2-.27.4-1.03 1.29-1.26 1.56-.23.27-.46.3-.86.1-.4-.2-1.69-.62-3.22-1.99-1.19-1.06-1.99-2.37-2.22-2.77-.23-.4-.02-.62.18-.82.18-.18.4-.46.6-.7.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.9-2.17-1.24-2.97-.33-.79-.66-.68-.9-.7-.23-.02-.5-.02-.76-.02-.27 0-.7.1-1.06.5-.36.4-1.4 1.37-1.4 3.34 0 1.97 1.43 3.87 1.63 4.13.2.27 2.81 4.29 6.81 6.02.95.41 1.7.66 2.28.84.96.3 1.83.26 2.52.16.77-.12 2.35-.96 2.68-1.89.33-.93.33-1.72.23-1.89-.1-.16-.36-.26-.76-.46Z"/></svg> Consultar disponibilidad</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>
+            <a href="index.html" class="logo footer-logo">Plan<strong>EnRuta</strong></a>
+            <p class="tagline">Viaja. Descubre. Vive.</p>
+        </div>
+        <div>
+            <h4>PlanEnRuta</h4>
+            <a href="index.html">Inicio</a>
+            <a href="tours.html">Tours</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="index.html#contacto">Contacto</a><a href="#" class="footer-terminos-link" data-terminos>Términos y condiciones</a>
+        </div>
+        <div>
+            <h4>Contacto</h4>
+            <span>Lima, Perú</span>
+            <span>WhatsApp: 923 118 811</span>
+            <span>reservas@planenruta.com</span>
+        </div>
+        <div>
+            <h4>Síguenos</h4>
+            <div class="social">
+                <a href="#" target="_blank" rel="noopener">Facebook</a>
+                <a href="#" target="_blank" rel="noopener">Instagram</a>
+                <a href="#" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© <span class="current-year">2026</span> PlanEnRuta. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/923118811" class="whatsapp" target="_blank" aria-label="Contactar por WhatsApp"><span><svg class="wa-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#25D366" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.737 5.58 2.137 8.01L0 32l8.19-2.113A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0Z"/><path fill="#FFF" d="M23.47 18.94c-.4-.2-2.35-1.16-2.71-1.29-.36-.13-.63-.2-.9.2-.27.4-1.03 1.29-1.26 1.56-.23.27-.46.3-.86.1-.4-.2-1.69-.62-3.22-1.99-1.19-1.06-1.99-2.37-2.22-2.77-.23-.4-.02-.62.18-.82.18-.18.4-.46.6-.7.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.9-2.17-1.24-2.97-.33-.79-.66-.68-.9-.7-.23-.02-.5-.02-.76-.02-.27 0-.7.1-1.06.5-.36.4-1.4 1.37-1.4 3.34 0 1.97 1.43 3.87 1.63 4.13.2.27 2.81 4.29 6.81 6.02.95.41 1.7.66 2.28.84.96.3 1.83.26 2.52.16.77-.12 2.35-.96 2.68-1.89.33-.93.33-1.72.23-1.89-.1-.16-.36-.26-.76-.46Z"/></svg></span></a>
+
+<script src="js/script.js"></script>
+<script src="js/cotizador.js"></script>
+<script src="js/terminos.js"></script>
+<script src="js/chatbot.js"></script>
+<a class="whatsapp-float" href="https://wa.me/923118811?text=Hola%20PlanEnRuta%20%F0%9F%91%8B%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20tours." target="_blank" rel="noopener" aria-label="Consultar por WhatsApp" title="Consultar por WhatsApp"><svg class="wa-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#25D366" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.737 5.58 2.137 8.01L0 32l8.19-2.113A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0Z"/><path fill="#FFF" d="M23.47 18.94c-.4-.2-2.35-1.16-2.71-1.29-.36-.13-.63-.2-.9.2-.27.4-1.03 1.29-1.26 1.56-.23.27-.46.3-.86.1-.4-.2-1.69-.62-3.22-1.99-1.19-1.06-1.99-2.37-2.22-2.77-.23-.4-.02-.62.18-.82.18-.18.4-.46.6-.7.2-.23.27-.4.4-.66.13-.27.07-.5-.03-.7-.1-.2-.9-2.17-1.24-2.97-.33-.79-.66-.68-.9-.7-.23-.02-.5-.02-.76-.02-.27 0-.7.1-1.06.5-.36.4-1.4 1.37-1.4 3.34 0 1.97 1.43 3.87 1.63 4.13.2.27 2.81 4.29 6.81 6.02.95.41 1.7.66 2.28.84.96.3 1.83.26 2.52.16.77-.12 2.35-.96 2.68-1.89.33-.93.33-1.72.23-1.89-.1-.16-.36-.26-.76-.46Z"/></svg></a>
+</body>
+</html>
